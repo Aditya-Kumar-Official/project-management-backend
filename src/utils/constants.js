@@ -13,3 +13,4 @@ export const taskStatusEnum = {
 };
 
 export const availableTaskStatus = Object.values(taskStatusEnum);
+export const databaseName = 'PROJECT_MANAGEMENT';
