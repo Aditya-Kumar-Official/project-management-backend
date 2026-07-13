@@ -1,4 +1,4 @@
-import { ApiResponse } from '../utils/ApiResponse';
+import { ApiResponse } from '../utils/ApiResponse.js';
 import { asyncHandler } from '../utils/async-handler.js';
 
 // const healthCheck=(req,res)=>{
@@ -12,8 +12,10 @@ import { asyncHandler } from '../utils/async-handler.js';
 //     }
 // }
 
-const healthCheck = asynHandler(async (req, res, next) => {
+const healthCheck = asyncHandler(async (req, res, next) => {
   res
     .status(200)
     .json(new ApiResponse(200, { status: 'ok' }, 'Server is running fine'));
 });
+
+export { healthCheck };
